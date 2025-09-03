@@ -261,18 +261,18 @@ const CROCalculator = () => {
 
   const getSeverityColor = (severity) => {
     switch (severity) {
-      case 'High': return 'text-red-600 bg-red-50 border-red-200';
-      case 'Medium': return 'text-yellow-600 bg-yellow-50 border-yellow-200';
-      case 'Low': return 'text-green-600 bg-green-50 border-green-200';
-      default: return 'text-gray-600 bg-gray-50 border-gray-200';
+      case 'High': return 'text-red-400 bg-red-900/20 border-red-800';
+      case 'Medium': return 'text-yellow-400 bg-yellow-900/20 border-yellow-800';
+      case 'Low': return 'text-green-400 bg-green-900/20 border-green-800';
+      default: return 'text-gray-400 bg-gray-800/20 border-gray-700';
     }
   };
 
   if (isAnalyzing) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900">
         {/* Enhanced Top Progress Bar */}
-        <div className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm border-b">
+        <div className="fixed top-0 left-0 right-0 z-50 bg-gray-800 shadow-lg border-b border-gray-700">
           <div className="relative h-2">
             <div 
               className="h-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 transition-all duration-500 ease-out"
@@ -299,13 +299,13 @@ const CROCalculator = () => {
               <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl mb-6">
                 <Globe className="h-10 w-10 text-white animate-spin" style={{ animationDuration: '3s' }} />
               </div>
-              <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
+              <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                 Analyzing Your Store
               </h1>
-              <p className="text-xl text-gray-600 mb-2">
+              <p className="text-xl text-gray-300 mb-2">
                 This may take a few seconds
               </p>
-              <div className="inline-flex items-center px-4 py-2 bg-blue-50 rounded-full text-sm text-blue-600 font-medium">
+              <div className="inline-flex items-center px-4 py-2 bg-gray-800 rounded-full text-sm text-blue-400 font-medium border border-gray-700">
                 <div className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse"></div>
                 Deep scanning for optimization opportunities
               </div>
@@ -315,29 +315,29 @@ const CROCalculator = () => {
             <div className="grid lg:grid-cols-2 gap-8 mb-8">
               
               {/* Website Preview with Screenshot */}
-              <div className="bg-white rounded-3xl shadow-xl overflow-hidden border">
+              <div className="bg-gray-800 rounded-3xl shadow-2xl overflow-hidden border border-gray-700">
                 {/* Browser Header */}
-                <div className="bg-gray-50 px-6 py-4 border-b flex items-center space-x-4">
+                <div className="bg-gray-700 px-6 py-4 border-b border-gray-600 flex items-center space-x-4">
                   <div className="flex space-x-2">
-                    <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                    <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                    <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                   </div>
-                  <div className="flex-1 bg-white rounded-lg px-4 py-2 flex items-center">
-                    <div className="w-4 h-4 text-green-600 mr-3">
+                  <div className="flex-1 bg-gray-600 rounded-lg px-4 py-2 flex items-center">
+                    <div className="w-4 h-4 text-green-400 mr-3">
                       <svg fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
                       </svg>
                     </div>
-                    <span className="text-gray-700 font-mono text-sm truncate">{formData.website_url}</span>
+                    <span className="text-gray-200 font-mono text-sm truncate">{formData.website_url}</span>
                   </div>
-                  <div className="px-3 py-1 bg-orange-100 text-orange-700 rounded-lg text-xs font-semibold animate-pulse">
+                  <div className="px-3 py-1 bg-orange-600 text-orange-100 rounded-lg text-xs font-semibold animate-pulse">
                     Scanning...
                   </div>
                 </div>
                 
                 {/* Website Screenshot Area */}
-                <div className="relative h-96 bg-gray-100">
+                <div className="relative h-96 bg-gray-900">
                   {websiteScreenshot ? (
                     <div className="relative h-full">
                       <img 
@@ -376,20 +376,20 @@ const CROCalculator = () => {
                     // Placeholder while loading screenshot
                     <div className="flex items-center justify-center h-full">
                       <div className="text-center">
-                        <div className="w-16 h-16 bg-gray-300 rounded-xl mx-auto mb-4 animate-pulse"></div>
-                        <div className="h-4 bg-gray-300 rounded w-32 mx-auto mb-2 animate-pulse"></div>
-                        <div className="h-3 bg-gray-200 rounded w-24 mx-auto animate-pulse"></div>
+                        <div className="w-16 h-16 bg-gray-700 rounded-xl mx-auto mb-4 animate-pulse"></div>
+                        <div className="h-4 bg-gray-700 rounded w-32 mx-auto mb-2 animate-pulse"></div>
+                        <div className="h-3 bg-gray-600 rounded w-24 mx-auto animate-pulse"></div>
                       </div>
                     </div>
                   )}
                 </div>
 
                 {/* Analysis Status */}
-                <div className="px-6 py-4 bg-gray-50 border-t">
-                  <div className="text-sm font-medium text-gray-700 mb-2">
+                <div className="px-6 py-4 bg-gray-700 border-t border-gray-600">
+                  <div className="text-sm font-medium text-gray-200 mb-2">
                     {currentScanText}
                   </div>
-                  <div className="flex justify-between text-xs text-gray-500">
+                  <div className="flex justify-between text-xs text-gray-400">
                     <span>Phase: {scanningPhase}</span>
                     <span>{Math.round(scanProgress)}% Complete</span>
                   </div>
@@ -397,45 +397,45 @@ const CROCalculator = () => {
               </div>
 
               {/* Analysis Progress */}
-              <div className="bg-white rounded-3xl p-8 shadow-xl border">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-                  <BarChart3 className="mr-3 text-blue-500" />
+              <div className="bg-gray-800 rounded-3xl p-8 shadow-2xl border border-gray-700">
+                <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
+                  <BarChart3 className="mr-3 text-blue-400" />
                   Analysis Progress
                 </h2>
                 
                 {/* Progress Stats */}
                 <div className="grid grid-cols-2 gap-4 mb-8">
-                  <div className="p-6 bg-gradient-to-br from-red-50 to-red-100 rounded-2xl text-center border border-red-100">
-                    <div className="text-3xl font-bold text-red-600">{issuesFound}</div>
-                    <div className="text-sm text-red-700 font-medium">Issues Found</div>
+                  <div className="p-6 bg-red-900/20 rounded-2xl text-center border border-red-800">
+                    <div className="text-3xl font-bold text-red-400">{issuesFound}</div>
+                    <div className="text-sm text-red-300 font-medium">Issues Found</div>
                   </div>
-                  <div className="p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl text-center border border-blue-100">
-                    <div className="text-3xl font-bold text-blue-600">{Math.round(scanProgress)}%</div>
-                    <div className="text-sm text-blue-700 font-medium">Complete</div>
+                  <div className="p-6 bg-blue-900/20 rounded-2xl text-center border border-blue-800">
+                    <div className="text-3xl font-bold text-blue-400">{Math.round(scanProgress)}%</div>
+                    <div className="text-sm text-blue-300 font-medium">Complete</div>
                   </div>
                 </div>
 
                 {/* Analysis Checklist */}
                 <div className="space-y-4">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Optimization Checks</h3>
+                  <h3 className="text-lg font-semibold text-gray-200 mb-4">Optimization Checks</h3>
                   {analysisChecks.map((check, index) => (
-                    <div key={index} className="flex items-center p-3 rounded-lg bg-gray-50 border">
+                    <div key={index} className="flex items-center p-3 rounded-lg bg-gray-700 border border-gray-600">
                       <div className={`w-5 h-5 rounded-full mr-3 flex items-center justify-center ${
                         checkedItems.includes(check) 
                           ? 'bg-green-500 text-white' 
-                          : 'bg-gray-300'
+                          : 'bg-gray-600'
                       }`}>
                         {checkedItems.includes(check) && (
                           <CheckCircle className="w-3 h-3" />
                         )}
                       </div>
                       <span className={`text-sm font-medium ${
-                        checkedItems.includes(check) ? 'text-green-700' : 'text-gray-600'
+                        checkedItems.includes(check) ? 'text-green-300' : 'text-gray-300'
                       }`}>
                         {check}
                       </span>
                       {checkedItems.includes(check) && (
-                        <div className="ml-auto text-green-600 animate-pulse">
+                        <div className="ml-auto text-green-400 animate-pulse">
                           <CheckCircle className="w-4 h-4" />
                         </div>
                       )}
@@ -444,19 +444,19 @@ const CROCalculator = () => {
                 </div>
 
                 {/* Additional Stats */}
-                <div className="mt-8 pt-6 border-t">
+                <div className="mt-8 pt-6 border-t border-gray-600">
                   <div className="grid grid-cols-3 gap-4 text-center">
-                    <div className="p-3 bg-purple-50 rounded-lg border border-purple-100">
-                      <div className="text-lg font-bold text-purple-600">250+</div>
-                      <div className="text-xs text-purple-700">Data Points</div>
+                    <div className="p-3 bg-purple-900/20 rounded-lg border border-purple-800">
+                      <div className="text-lg font-bold text-purple-400">250+</div>
+                      <div className="text-xs text-purple-300">Data Points</div>
                     </div>
-                    <div className="p-3 bg-green-50 rounded-lg border border-green-100">
-                      <div className="text-lg font-bold text-green-600">{Math.round(scanProgress / 4)}s</div>
-                      <div className="text-xs text-green-700">Time Elapsed</div>
+                    <div className="p-3 bg-green-900/20 rounded-lg border border-green-800">
+                      <div className="text-lg font-bold text-green-400">{Math.round(scanProgress / 4)}s</div>
+                      <div className="text-xs text-green-300">Time Elapsed</div>
                     </div>
-                    <div className="p-3 bg-yellow-50 rounded-lg border border-yellow-100">
-                      <div className="text-lg font-bold text-yellow-600">AI</div>
-                      <div className="text-xs text-yellow-700">Powered</div>
+                    <div className="p-3 bg-yellow-900/20 rounded-lg border border-yellow-800">
+                      <div className="text-lg font-bold text-yellow-400">AI</div>
+                      <div className="text-xs text-yellow-300">Powered</div>
                     </div>
                   </div>
                 </div>
@@ -464,20 +464,20 @@ const CROCalculator = () => {
             </div>
 
             {/* Bottom Status Bar */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg border">
+            <div className="bg-gray-800 rounded-2xl p-6 shadow-2xl border border-gray-700">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
                     <Zap className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900">AI Analysis Engine</div>
-                    <div className="text-sm text-gray-600">{currentScanText}</div>
+                    <div className="font-semibold text-white">AI Analysis Engine</div>
+                    <div className="text-sm text-gray-300">{currentScanText}</div>
                   </div>
                 </div>
                 <div className="text-right">
-                  <div className="text-2xl font-bold text-blue-600">{Math.round(scanProgress)}%</div>
-                  <div className="text-sm text-gray-500">Progress</div>
+                  <div className="text-2xl font-bold text-blue-400">{Math.round(scanProgress)}%</div>
+                  <div className="text-sm text-gray-400">Progress</div>
                 </div>
               </div>
             </div>
@@ -498,51 +498,51 @@ const CROCalculator = () => {
 
   if (auditResult) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900">
         <div className="container mx-auto px-4 py-8">
           <div className="max-w-6xl mx-auto">
             
             {/* Header */}
             <div className="text-center mb-12 text-white">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-500 rounded-full mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-600 rounded-full mb-6">
                 <CheckCircle className="h-8 w-8" />
               </div>
               <h1 className="text-4xl font-bold mb-4">Your CRO Audit is Ready!</h1>
-              <p className="text-xl opacity-90">We've identified significant opportunities for growth</p>
+              <p className="text-xl text-gray-300">We've identified significant opportunities for growth</p>
             </div>
 
             {/* Current Performance */}
-            <div className="bg-white rounded-2xl p-8 mb-8 shadow-2xl">
-              <h2 className="text-2xl font-bold mb-6 flex items-center">
-                <BarChart3 className="mr-3 text-blue-600" />
+            <div className="bg-gray-800 rounded-2xl p-8 mb-8 shadow-2xl border border-gray-700">
+              <h2 className="text-2xl font-bold mb-6 flex items-center text-white">
+                <BarChart3 className="mr-3 text-blue-400" />
                 Current Performance Snapshot
               </h2>
               <div className="grid md:grid-cols-4 gap-6">
-                <div className="text-center p-4 bg-blue-50 rounded-lg">
-                  <Users className="h-8 w-8 text-blue-600 mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-blue-600">{auditResult.current_metrics.monthly_visitors.toLocaleString()}</div>
-                  <div className="text-sm text-gray-600">Monthly Visitors</div>
+                <div className="text-center p-4 bg-blue-900/20 rounded-lg border border-blue-800">
+                  <Users className="h-8 w-8 text-blue-400 mx-auto mb-2" />
+                  <div className="text-2xl font-bold text-blue-400">{auditResult.current_metrics.monthly_visitors.toLocaleString()}</div>
+                  <div className="text-sm text-gray-300">Monthly Visitors</div>
                 </div>
-                <div className="text-center p-4 bg-green-50 rounded-lg">
-                  <Target className="h-8 w-8 text-green-600 mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-green-600">{auditResult.current_metrics.conversion_rate}%</div>
-                  <div className="text-sm text-gray-600">Conversion Rate</div>
+                <div className="text-center p-4 bg-green-900/20 rounded-lg border border-green-800">
+                  <Target className="h-8 w-8 text-green-400 mx-auto mb-2" />
+                  <div className="text-2xl font-bold text-green-400">{auditResult.current_metrics.conversion_rate}%</div>
+                  <div className="text-sm text-gray-300">Conversion Rate</div>
                 </div>
-                <div className="text-center p-4 bg-purple-50 rounded-lg">
-                  <DollarSign className="h-8 w-8 text-purple-600 mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-purple-600">${auditResult.current_metrics.average_order_value}</div>
-                  <div className="text-sm text-gray-600">Average Order Value</div>
+                <div className="text-center p-4 bg-purple-900/20 rounded-lg border border-purple-800">
+                  <DollarSign className="h-8 w-8 text-purple-400 mx-auto mb-2" />
+                  <div className="text-2xl font-bold text-purple-400">${auditResult.current_metrics.average_order_value}</div>
+                  <div className="text-sm text-gray-300">Average Order Value</div>
                 </div>
-                <div className="text-center p-4 bg-yellow-50 rounded-lg">
-                  <TrendingUp className="h-8 w-8 text-yellow-600 mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-yellow-600">${auditResult.current_metrics.monthly_revenue.toLocaleString()}</div>
-                  <div className="text-sm text-gray-600">Monthly Revenue</div>
+                <div className="text-center p-4 bg-yellow-900/20 rounded-lg border border-yellow-800">
+                  <TrendingUp className="h-8 w-8 text-yellow-400 mx-auto mb-2" />
+                  <div className="text-2xl font-bold text-yellow-400">${auditResult.current_metrics.monthly_revenue.toLocaleString()}</div>
+                  <div className="text-sm text-gray-300">Monthly Revenue</div>
                 </div>
               </div>
             </div>
 
             {/* Revenue Potential */}
-            <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-8 mb-8 text-white shadow-2xl">
+            <div className="bg-gradient-to-r from-green-600 to-emerald-700 rounded-2xl p-8 mb-8 text-white shadow-2xl">
               <h2 className="text-3xl font-bold mb-6">Revenue Recovery Roadmap</h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
@@ -578,8 +578,8 @@ const CROCalculator = () => {
             </div>
 
             {/* Critical Issues */}
-            <div className="bg-white rounded-2xl p-8 mb-8 shadow-2xl">
-              <h2 className="text-2xl font-bold mb-6 flex items-center text-red-600">
+            <div className="bg-gray-800 rounded-2xl p-8 mb-8 shadow-2xl border border-gray-700">
+              <h2 className="text-2xl font-bold mb-6 flex items-center text-red-400">
                 <AlertTriangle className="mr-3" />
                 Critical Issues Found
               </h2>
@@ -589,43 +589,43 @@ const CROCalculator = () => {
                     <div className="flex justify-between items-start">
                       <div className="flex-1">
                         <div className="flex items-center mb-2">
-                          <span className="font-semibold text-sm">{issue.category}</span>
+                          <span className="font-semibold text-sm text-gray-300">{issue.category}</span>
                           <span className={`ml-3 px-2 py-1 rounded text-xs font-bold ${getSeverityColor(issue.severity)}`}>
                             {issue.severity}
                           </span>
                         </div>
-                        <h3 className="font-bold text-gray-900 mb-2">{issue.issue}</h3>
-                        <p className="text-sm text-gray-600 mb-2">{issue.description}</p>
+                        <h3 className="font-bold text-white mb-2">{issue.issue}</h3>
+                        <p className="text-sm text-gray-300 mb-2">{issue.description}</p>
                       </div>
                       <div className="text-right">
-                        <div className="text-2xl font-bold text-green-600">+{issue.potential_uplift}%</div>
-                        <div className="text-xs text-gray-500">Potential Uplift</div>
+                        <div className="text-2xl font-bold text-green-400">+{issue.potential_uplift}%</div>
+                        <div className="text-xs text-gray-400">Potential Uplift</div>
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
-              <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-                <p className="text-sm text-blue-800">
+              <div className="mt-6 p-4 bg-blue-900/20 rounded-lg border border-blue-800">
+                <p className="text-sm text-blue-300">
                   <strong>Found {auditResult.issues_found.length} total issues.</strong> The top 4 critical issues above represent your biggest opportunities for immediate impact.
                 </p>
               </div>
             </div>
 
             {/* Competitor Analysis */}
-            <div className="bg-white rounded-2xl p-8 mb-8 shadow-2xl">
-              <h2 className="text-2xl font-bold mb-6">Competitor Gap Analysis</h2>
-              <p className="text-gray-600 mb-6">Your top competitors are significantly outperforming you:</p>
+            <div className="bg-gray-800 rounded-2xl p-8 mb-8 shadow-2xl border border-gray-700">
+              <h2 className="text-2xl font-bold mb-6 text-white">Competitor Gap Analysis</h2>
+              <p className="text-gray-300 mb-6">Your top competitors are significantly outperforming you:</p>
               <div className="grid gap-4">
                 {auditResult.competitor_analysis.map((competitor, index) => (
-                  <div key={index} className="flex justify-between items-center p-4 border rounded-lg hover:bg-gray-50">
+                  <div key={index} className="flex justify-between items-center p-4 border border-gray-600 rounded-lg hover:bg-gray-700">
                     <div>
-                      <div className="font-semibold">{competitor.name}</div>
-                      <div className="text-sm text-gray-600">{competitor.key_advantage}</div>
+                      <div className="font-semibold text-white">{competitor.name}</div>
+                      <div className="text-sm text-gray-300">{competitor.key_advantage}</div>
                     </div>
                     <div className="text-right">
-                      <div className="font-bold text-green-600">{competitor.conversion_rate}% CR</div>
-                      <div className="text-sm text-gray-500">${competitor.estimated_revenue.toLocaleString()}/mo revenue</div>
+                      <div className="font-bold text-green-400">{competitor.conversion_rate}% CR</div>
+                      <div className="text-sm text-gray-400">${competitor.estimated_revenue.toLocaleString()}/mo revenue</div>
                     </div>
                   </div>
                 ))}
@@ -633,25 +633,25 @@ const CROCalculator = () => {
             </div>
 
             {/* Recommendations */}
-            <div className="bg-white rounded-2xl p-8 mb-8 shadow-2xl">
-              <h2 className="text-2xl font-bold mb-6 flex items-center">
-                <Zap className="mr-3 text-yellow-500" />
+            <div className="bg-gray-800 rounded-2xl p-8 mb-8 shadow-2xl border border-gray-700">
+              <h2 className="text-2xl font-bold mb-6 flex items-center text-white">
+                <Zap className="mr-3 text-yellow-400" />
                 Priority Recommendations
               </h2>
               <div className="grid md:grid-cols-2 gap-4">
                 {auditResult.recommendations.map((rec, index) => (
-                  <div key={index} className="flex items-start p-4 border rounded-lg hover:bg-blue-50 hover:border-blue-200 transition-colors">
+                  <div key={index} className="flex items-start p-4 border border-gray-600 rounded-lg hover:bg-gray-700 transition-colors">
                     <div className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
                       {index + 1}
                     </div>
-                    <div className="text-gray-700">{rec}</div>
+                    <div className="text-gray-300">{rec}</div>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* CTA Section */}
-            <div className="bg-gradient-to-r from-orange-500 to-red-600 rounded-2xl p-8 text-white text-center shadow-2xl">
+            <div className="bg-gradient-to-r from-orange-600 to-red-700 rounded-2xl p-8 text-white text-center shadow-2xl">
               <h2 className="text-3xl font-bold mb-4">Ready to Capture Your ${Math.round(auditResult.revenue_potential.monthly_revenue_uplift/1000)}K/mo Opportunity?</h2>
               <p className="text-xl mb-8 opacity-90">
                 Get your complete audit report + 90-day implementation roadmap
@@ -682,61 +682,61 @@ const CROCalculator = () => {
               </button>
               
               <div className="mt-6 text-sm opacity-75">
-                ⏰ Limited slots available • 🔥 2 spots left this week
+                Limited slots available - 2 spots left this week
               </div>
             </div>
 
             {/* Contact Form Modal */}
             {showContactForm && (
-              <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-                <div className="bg-white rounded-2xl p-8 max-w-md w-full">
-                  <h3 className="text-2xl font-bold mb-6">Get Your Complete CRO Roadmap</h3>
+              <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50">
+                <div className="bg-gray-800 rounded-2xl p-8 max-w-md w-full border border-gray-700">
+                  <h3 className="text-2xl font-bold mb-6 text-white">Get Your Complete CRO Roadmap</h3>
                   <div className="space-y-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                      <label className="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
                       <input
                         type="text"
                         value={formData.name}
                         onChange={(e) => handleInputChange('name', e.target.value)}
-                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white"
                         placeholder="Enter your name"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                      <label className="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
                       <input
                         type="email"
                         value={formData.email}
                         onChange={(e) => handleInputChange('email', e.target.value)}
-                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white"
                         placeholder="Enter your email"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Phone (Optional)</label>
+                      <label className="block text-sm font-medium text-gray-300 mb-2">Phone (Optional)</label>
                       <input
                         type="tel"
                         value={formData.phone}
                         onChange={(e) => handleInputChange('phone', e.target.value)}
-                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white"
                         placeholder="Enter your phone number"
                       />
                     </div>
                   </div>
                   {error && (
-                    <div className="mt-4 p-3 bg-red-50 border border-red-200 text-red-600 rounded-lg text-sm">
+                    <div className="mt-4 p-3 bg-red-900/20 border border-red-800 text-red-400 rounded-lg text-sm">
                       {error}
                     </div>
                   )}
                   {contactSuccess && (
-                    <div className="mt-4 p-3 bg-green-50 border border-green-200 text-green-600 rounded-lg text-sm">
+                    <div className="mt-4 p-3 bg-green-900/20 border border-green-800 text-green-400 rounded-lg text-sm">
                       Thank you! Your details have been submitted. We'll be in touch soon.
                     </div>
                   )}
                   <div className="flex gap-4 mt-8">
                     <button
                       onClick={() => setShowContactForm(false)}
-                      className="flex-1 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50"
+                      className="flex-1 px-4 py-2 border border-gray-600 rounded-lg hover:bg-gray-700 text-gray-300"
                     >
                       Cancel
                     </button>
@@ -759,18 +759,18 @@ const CROCalculator = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900">
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-2xl mx-auto">
           
           {/* Header */}
           <div className="text-center mb-12 text-white">
             <h1 className="text-4xl font-bold mb-4">AI Powered CRO Audit</h1>
-            <p className="text-xl opacity-90">
+            <p className="text-xl text-gray-300">
               Uncover exactly how much revenue you're leaving on the table
             </p>
-            <div className="mt-4 text-sm bg-orange-500 inline-block px-4 py-2 rounded-full">
-              ⚡ Only 7 free audits remaining today
+            <div className="mt-4 text-sm bg-orange-600 inline-block px-4 py-2 rounded-full">
+              Only 7 free audits remaining today
             </div>
           </div>
 
@@ -783,14 +783,14 @@ const CROCalculator = () => {
                   className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${
                     index <= currentStep
                       ? 'bg-blue-500 text-white'
-                      : 'bg-white/20 text-white/60'
+                      : 'bg-gray-700 text-gray-400'
                   }`}
                 >
                   {index + 1}
                 </div>
               ))}
             </div>
-            <div className="w-full bg-white/20 rounded-full h-2">
+            <div className="w-full bg-gray-700 rounded-full h-2">
               <div
                 className="bg-blue-500 h-2 rounded-full transition-all duration-300"
                 style={{ width: `${((currentStep + 1) / steps.length) * 100}%` }}
@@ -799,12 +799,12 @@ const CROCalculator = () => {
           </div>
 
           {/* Form Card */}
-          <div className="bg-white rounded-2xl p-8 shadow-2xl">
+          <div className="bg-gray-800 rounded-2xl p-8 shadow-2xl border border-gray-700">
             <div className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">
+              <h2 className="text-2xl font-bold text-white mb-2">
                 {steps[currentStep].title}
               </h2>
-              <p className="text-gray-600">{steps[currentStep].subtitle}</p>
+              <p className="text-gray-300">{steps[currentStep].subtitle}</p>
             </div>
 
             <div className="space-y-6">
@@ -813,29 +813,29 @@ const CROCalculator = () => {
               {currentStep === 0 && (
                 <>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-gray-300 mb-2">
                       Website URL
                     </label>
                     <input
                       type="url"
                       value={formData.website_url}
                       onChange={(e) => handleInputChange('website_url', e.target.value)}
-                      className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white"
                       placeholder="https://yourstore.com"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-gray-300 mb-2">
                       Monthly Website Visitors
                     </label>
                     <input
                       type="number"
                       value={formData.monthly_visitors}
                       onChange={(e) => handleInputChange('monthly_visitors', e.target.value)}
-                      className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white"
                       placeholder="e.g., 50000"
                     />
-                    <p className="text-xs text-gray-500 mt-1">
+                    <p className="text-xs text-gray-400 mt-1">
                       Check Google Analytics or similar tools for this data
                     </p>
                   </div>
@@ -846,7 +846,7 @@ const CROCalculator = () => {
               {currentStep === 1 && (
                 <>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-gray-300 mb-2">
                       Current Conversion Rate (%)
                     </label>
                     <input
@@ -854,34 +854,34 @@ const CROCalculator = () => {
                       step="0.1"
                       value={formData.current_conversion_rate}
                       onChange={(e) => handleInputChange('current_conversion_rate', e.target.value)}
-                      className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white"
                       placeholder="e.g., 2.5"
                     />
-                    <p className="text-xs text-gray-500 mt-1">
+                    <p className="text-xs text-gray-400 mt-1">
                       Orders ÷ Visitors × 100 (Industry average: 2-3%)
                     </p>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-gray-300 mb-2">
                       Average Order Value ($)
                     </label>
                     <input
                       type="number"
                       value={formData.average_order_value}
                       onChange={(e) => handleInputChange('average_order_value', e.target.value)}
-                      className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white"
                       placeholder="e.g., 125"
                     />
-                    <p className="text-xs text-gray-500 mt-1">
+                    <p className="text-xs text-gray-400 mt-1">
                       Total Revenue ÷ Number of Orders
                     </p>
                   </div>
                   
                   {/* Show current revenue preview */}
                   {formData.monthly_visitors && formData.current_conversion_rate && formData.average_order_value && (
-                    <div className="bg-blue-50 p-4 rounded-lg">
-                      <div className="text-sm text-gray-600 mb-1">Current Monthly Revenue:</div>
-                      <div className="text-2xl font-bold text-blue-600">
+                    <div className="bg-blue-900/20 p-4 rounded-lg border border-blue-800">
+                      <div className="text-sm text-gray-300 mb-1">Current Monthly Revenue:</div>
+                      <div className="text-2xl font-bold text-blue-400">
                         ${Math.round(parseInt(formData.monthly_visitors) * (parseFloat(formData.current_conversion_rate) / 100) * parseFloat(formData.average_order_value)).toLocaleString()}
                       </div>
                     </div>
@@ -892,7 +892,7 @@ const CROCalculator = () => {
               {/* Step 3: Goals */}
               {currentStep === 2 && (
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-4">
+                  <label className="block text-sm font-medium text-gray-300 mb-4">
                     What's your primary optimization goal?
                   </label>
                   <div className="grid gap-3">
@@ -902,15 +902,15 @@ const CROCalculator = () => {
                         onClick={() => handleInputChange('primary_goal', goal)}
                         className={`p-4 text-left border rounded-lg transition-all ${
                           formData.primary_goal === goal
-                            ? 'border-blue-500 bg-blue-50 text-blue-700'
-                            : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
+                            ? 'border-blue-500 bg-blue-900/20 text-blue-400'
+                            : 'border-gray-600 hover:border-gray-500 hover:bg-gray-700 text-gray-300'
                         }`}
                       >
                         <div className="flex items-center">
                           <div className={`w-4 h-4 rounded-full border-2 mr-3 ${
                             formData.primary_goal === goal
                               ? 'border-blue-500 bg-blue-500'
-                              : 'border-gray-300'
+                              : 'border-gray-500'
                           }`}>
                             {formData.primary_goal === goal && (
                               <div className="w-full h-full rounded-full bg-white transform scale-50"></div>
@@ -931,7 +931,7 @@ const CROCalculator = () => {
               <button
                 onClick={prevStep}
                 disabled={currentStep === 0}
-                className="px-6 py-3 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-6 py-3 border border-gray-600 rounded-lg text-gray-300 hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 Previous
               </button>
@@ -948,7 +948,7 @@ const CROCalculator = () => {
                 <button
                   onClick={analyzeWebsite}
                   disabled={!isStepValid(currentStep)}
-                  className="px-8 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:from-green-600 hover:to-emerald-700 disabled:opacity-50 disabled:cursor-not-allowed font-bold flex items-center"
+                  className="px-8 py-3 bg-gradient-to-r from-green-600 to-emerald-700 text-white rounded-lg hover:from-green-700 hover:to-emerald-800 disabled:opacity-50 disabled:cursor-not-allowed font-bold flex items-center"
                 >
                   <Zap className="mr-2 h-5 w-5" />
                   Analyze My Website
@@ -957,7 +957,7 @@ const CROCalculator = () => {
             </div>
 
             {/* Trust Indicators */}
-            <div className="mt-8 pt-6 border-t text-center text-gray-500 text-sm">
+            <div className="mt-8 pt-6 border-t border-gray-600 text-center text-gray-400 text-sm">
               <div className="flex items-center justify-center space-x-6">
                 <span className="flex items-center">
                   <CheckCircle className="h-4 w-4 mr-1 text-green-500" />
