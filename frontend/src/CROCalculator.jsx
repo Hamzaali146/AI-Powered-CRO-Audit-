@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ChevronRight, Zap, TrendingUp, Target, Users, DollarSign, AlertTriangle, CheckCircle, Mail, Phone, ExternalLink, BarChart3, Monitor, Smartphone, Globe } from 'lucide-react';
 
 const API_BASE = "http://localhost:8000/api/v1/cro-audit";
-// dsds
+
 const CROCalculator = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [formData, setFormData] = useState({
@@ -270,9 +270,9 @@ const CROCalculator = () => {
 
   if (isAnalyzing) {
     return (
-  <div className="min-h-screen bg-gradient-to-br from-[#401F86] via-slate-900 to-[#633eac]">
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900">
         {/* Enhanced Top Progress Bar */}
-  <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-br from-[#401F86] via-slate-900 to-[#633eac] shadow-lg border-b border-gray-700">
+        <div className="fixed top-0 left-0 right-0 z-50 bg-gray-800 shadow-lg border-b border-gray-700">
           <div className="relative h-2">
             <div 
               className="h-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 transition-all duration-500 ease-out"
@@ -315,7 +315,7 @@ const CROCalculator = () => {
             <div className="grid lg:grid-cols-2 gap-8 mb-8">
               
               {/* Website Preview with Screenshot */}
-              <div className="bg-gradient-to-br from-[#401F86] via-slate-900 to-[#633eac] rounded-3xl shadow-2xl overflow-hidden border border-gray-700">
+              <div className="bg-gray-800 rounded-3xl shadow-2xl overflow-hidden border border-gray-700">
                 {/* Browser Header */}
                 <div className="bg-gray-700 px-6 py-4 border-b border-gray-600 flex items-center space-x-4">
                   <div className="flex space-x-2">
@@ -464,7 +464,7 @@ const CROCalculator = () => {
             </div>
 
             {/* Bottom Status Bar */}
-              <div className="bg-gradient-to-br from-[#401F86] via-slate-900 to-[#633eac] rounded-2xl p-6 shadow-2xl border border-gray-700">
+            <div className="bg-gray-800 rounded-2xl p-6 shadow-2xl border border-gray-700">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
@@ -512,7 +512,7 @@ const CROCalculator = () => {
             </div>
 
             {/* Current Performance */}
-            <div className="bg-gradient-to-br from-[#401F86] via-slate-900 to-[#633eac] rounded-2xl p-8 mb-8 shadow-2xl border border-gray-700">
+            <div className="bg-gray-800 rounded-2xl p-8 mb-8 shadow-2xl border border-gray-700">
               <h2 className="text-2xl font-bold mb-6 flex items-center text-white">
                 <BarChart3 className="mr-3 text-blue-400" />
                 Current Performance Snapshot
@@ -578,7 +578,7 @@ const CROCalculator = () => {
             </div>
 
             {/* Critical Issues */}
-            <div className="bg-gradient-to-br from-[#401F86] via-slate-900 to-[#633eac] rounded-2xl p-8 mb-8 shadow-2xl border border-gray-700">
+            <div className="bg-gray-800 rounded-2xl p-8 mb-8 shadow-2xl border border-gray-700">
               <h2 className="text-2xl font-bold mb-6 flex items-center text-red-400">
                 <AlertTriangle className="mr-3" />
                 Critical Issues Found
@@ -613,7 +613,7 @@ const CROCalculator = () => {
             </div>
 
             {/* Competitor Analysis */}
-            <div className="bg-gradient-to-br from-[#401F86] via-slate-900 to-[#633eac] rounded-2xl p-8 mb-8 shadow-2xl border border-gray-700">
+            <div className="bg-gray-800 rounded-2xl p-8 mb-8 shadow-2xl border border-gray-700">
               <h2 className="text-2xl font-bold mb-6 text-white">Competitor Gap Analysis</h2>
               <p className="text-gray-300 mb-6">Your top competitors are significantly outperforming you:</p>
               <div className="grid gap-4">
@@ -759,7 +759,7 @@ const CROCalculator = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br ">
+    <div className="min-h-screen bg-gradient-to-br from-[#401F86] via-slate-900 to-[#633eac]">
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-2xl mx-auto">
           
