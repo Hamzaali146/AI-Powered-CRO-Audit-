@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ChevronRight, Zap, TrendingUp, Target, Users, DollarSign, AlertTriangle, CheckCircle, Mail, Phone, ExternalLink, BarChart3, Monitor, Smartphone, Globe } from 'lucide-react';
 
 const API_BASE = "http://localhost:8000/api/v1/cro-audit";
-
+// dsds
 const CROCalculator = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [formData, setFormData] = useState({
@@ -759,7 +759,7 @@ const CROCalculator = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#401F86] via-slate-900 to-[#633eac]">
+    <div className="min-h-screen bg-gradient-to-br ">
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-2xl mx-auto">
           
