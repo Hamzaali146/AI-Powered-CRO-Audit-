@@ -270,9 +270,9 @@ const CROCalculator = () => {
 
   if (isAnalyzing) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900">
+  <div className="min-h-screen bg-gradient-to-br from-[#401F86] via-slate-900 to-[#633eac]">
         {/* Enhanced Top Progress Bar */}
-        <div className="fixed top-0 left-0 right-0 z-50 bg-gray-800 shadow-lg border-b border-gray-700">
+  <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-br from-[#401F86] via-slate-900 to-[#633eac] shadow-lg border-b border-gray-700">
           <div className="relative h-2">
             <div 
               className="h-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 transition-all duration-500 ease-out"
@@ -315,7 +315,7 @@ const CROCalculator = () => {
             <div className="grid lg:grid-cols-2 gap-8 mb-8">
               
               {/* Website Preview with Screenshot */}
-              <div className="bg-gray-800 rounded-3xl shadow-2xl overflow-hidden border border-gray-700">
+              <div className="bg-gradient-to-br from-[#401F86] via-slate-900 to-[#633eac] rounded-3xl shadow-2xl overflow-hidden border border-gray-700">
                 {/* Browser Header */}
                 <div className="bg-gray-700 px-6 py-4 border-b border-gray-600 flex items-center space-x-4">
                   <div className="flex space-x-2">
@@ -464,7 +464,7 @@ const CROCalculator = () => {
             </div>
 
             {/* Bottom Status Bar */}
-            <div className="bg-gray-800 rounded-2xl p-6 shadow-2xl border border-gray-700">
+              <div className="bg-gradient-to-br from-[#401F86] via-slate-900 to-[#633eac] rounded-2xl p-6 shadow-2xl border border-gray-700">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
@@ -512,7 +512,7 @@ const CROCalculator = () => {
             </div>
 
             {/* Current Performance */}
-            <div className="bg-gray-800 rounded-2xl p-8 mb-8 shadow-2xl border border-gray-700">
+            <div className="bg-gradient-to-br from-[#401F86] via-slate-900 to-[#633eac] rounded-2xl p-8 mb-8 shadow-2xl border border-gray-700">
               <h2 className="text-2xl font-bold mb-6 flex items-center text-white">
                 <BarChart3 className="mr-3 text-blue-400" />
                 Current Performance Snapshot
@@ -578,7 +578,7 @@ const CROCalculator = () => {
             </div>
 
             {/* Critical Issues */}
-            <div className="bg-gray-800 rounded-2xl p-8 mb-8 shadow-2xl border border-gray-700">
+            <div className="bg-gradient-to-br from-[#401F86] via-slate-900 to-[#633eac] rounded-2xl p-8 mb-8 shadow-2xl border border-gray-700">
               <h2 className="text-2xl font-bold mb-6 flex items-center text-red-400">
                 <AlertTriangle className="mr-3" />
                 Critical Issues Found
@@ -613,7 +613,7 @@ const CROCalculator = () => {
             </div>
 
             {/* Competitor Analysis */}
-            <div className="bg-gray-800 rounded-2xl p-8 mb-8 shadow-2xl border border-gray-700">
+            <div className="bg-gradient-to-br from-[#401F86] via-slate-900 to-[#633eac] rounded-2xl p-8 mb-8 shadow-2xl border border-gray-700">
               <h2 className="text-2xl font-bold mb-6 text-white">Competitor Gap Analysis</h2>
               <p className="text-gray-300 mb-6">Your top competitors are significantly outperforming you:</p>
               <div className="grid gap-4">
@@ -759,7 +759,7 @@ const CROCalculator = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-[#401F86] via-slate-900 to-[#633eac]">
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-2xl mx-auto">
           
@@ -769,7 +769,7 @@ const CROCalculator = () => {
             <p className="text-xl text-gray-300">
               Uncover exactly how much revenue you're leaving on the table
             </p>
-            <div className="mt-4 text-sm bg-orange-600 inline-block px-4 py-2 rounded-full">
+            <div className="mt-4 text-sm bg-[#401F86] inline-block px-4 py-2 rounded-full">
               Only 7 free audits remaining today
             </div>
           </div>
@@ -782,7 +782,7 @@ const CROCalculator = () => {
                   key={index}
                   className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${
                     index <= currentStep
-                      ? 'bg-blue-500 text-white'
+                      ? 'bg-[#401F86] text-[#D5C8F0]'
                       : 'bg-gray-700 text-gray-400'
                   }`}
                 >
@@ -792,14 +792,14 @@ const CROCalculator = () => {
             </div>
             <div className="w-full bg-gray-700 rounded-full h-2">
               <div
-                className="bg-blue-500 h-2 rounded-full transition-all duration-300"
+                className="bg-[#D5C8F0] h-2 rounded-full transition-all duration-300"
                 style={{ width: `${((currentStep + 1) / steps.length) * 100}%` }}
               ></div>
             </div>
           </div>
 
           {/* Form Card */}
-          <div className="bg-gray-800 rounded-2xl p-8 shadow-2xl border border-gray-700">
+          <div className="bg-gradient-to-br from-[#401F86] via-slate-900 to-[#633eac] rounded-2xl p-8 shadow-2xl border border-gray-700">
             <div className="mb-8">
               <h2 className="text-2xl font-bold text-white mb-2">
                 {steps[currentStep].title}
@@ -940,7 +940,7 @@ const CROCalculator = () => {
                 <button
                   onClick={nextStep}
                   disabled={!isStepValid(currentStep)}
-                  className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
+                  className="px-6 py-3 bg-[#6f51b1] text-white rounded-lg hover:bg-[#60449c] disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
                 >
                   Continue <ChevronRight className="ml-2 h-4 w-4" />
                 </button>
@@ -948,7 +948,7 @@ const CROCalculator = () => {
                 <button
                   onClick={analyzeWebsite}
                   disabled={!isStepValid(currentStep)}
-                  className="px-8 py-3 bg-gradient-to-r from-green-600 to-emerald-700 text-white rounded-lg hover:from-green-700 hover:to-emerald-800 disabled:opacity-50 disabled:cursor-not-allowed font-bold flex items-center"
+                  className="px-8 py-3 bg-gradient-to-r from-[#6f51b1] to-[#60449c] text-white rounded-lg hover:from-[#6f51b1] hover:to-[#60449c] disabled:opacity-50 disabled:cursor-not-allowed font-bold flex items-center"
                 >
                   <Zap className="mr-2 h-5 w-5" />
                   Analyze My Website
@@ -960,15 +960,15 @@ const CROCalculator = () => {
             <div className="mt-8 pt-6 border-t border-gray-600 text-center text-gray-400 text-sm">
               <div className="flex items-center justify-center space-x-6">
                 <span className="flex items-center">
-                  <CheckCircle className="h-4 w-4 mr-1 text-green-500" />
+                  <CheckCircle className="h-4 w-4 mr-1 text-[#D5C8F0]" />
                   Trusted by 500+ brands
                 </span>
                 <span className="flex items-center">
-                  <CheckCircle className="h-4 w-4 mr-1 text-green-500" />
+                  <CheckCircle className="h-4 w-4 mr-1 text-[#D5C8F0]" />
                   100% Free Analysis
                 </span>
                 <span className="flex items-center">
-                  <CheckCircle className="h-4 w-4 mr-1 text-green-500" />
+                  <CheckCircle className="h-4 w-4 mr-1 text-[#D5C8F0]" />
                   No Credit Card Required
                 </span>
               </div>
