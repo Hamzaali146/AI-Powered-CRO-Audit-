@@ -380,7 +380,7 @@ const CROCalculator = () => {
 
   if (isAnalyzing) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900">
+      <div className="min-h-screen bg-gradient-to-br from-[#401F86] via-slate-900 to-[#633eac] font-inter overflow-x-hidden">
         {/* Enhanced Top Progress Bar */}
         <div className="fixed top-0 left-0 right-0 z-50 bg-gray-800 shadow-lg border-b border-gray-700">
           <div className="relative h-2">
@@ -514,7 +514,7 @@ const CROCalculator = () => {
               </div>
 
               {/* Analysis Progress */}
-              <div className="bg-gray-800 rounded-3xl p-8 shadow-2xl border border-gray-700">
+              <div className="bg-gradient-to-br from-[#401F86] via-slate-900 to-[#633eac] rounded-2xl p-8 shadow-2xl border border-[#401F86]">
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
                   <BarChart3 className="mr-3 text-blue-400" />
                   Analysis Progress
@@ -653,7 +653,7 @@ const CROCalculator = () => {
 
   if (auditResult) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900">
+      <div className="min-h-screen bg-gradient-to-br from-[#401F86] via-slate-900 to-[#633eac] font-inter overflow-x-hidden">
         <div className="container mx-auto px-4 py-8">
           <div className="max-w-6xl mx-auto">
             {/* Header */}
@@ -869,7 +869,7 @@ const CROCalculator = () => {
                     key={index}
                     className="flex items-start p-4 border border-gray-600 rounded-lg hover:bg-gray-700 transition-colors"
                   >
-                    <div className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
+                    <div className="bg-[#6f51b1] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
                       {index + 1}
                     </div>
                     <div className="text-gray-300">{rec}</div>
@@ -999,7 +999,7 @@ const CROCalculator = () => {
                     <button
                       onClick={submitContactInfo}
                       disabled={!formData.name || !formData.email}
-                      className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="flex-1 px-4 py-2 bg-[#6f51b1] text-white rounded-lg hover:bg-[#60449c] disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       Get My Report
                     </button>
