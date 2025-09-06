@@ -1014,13 +1014,13 @@ const CROCalculator = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#401F86] via-slate-900 to-[#633eac] font-inter">
+    <div className="min-h-screen bg-gradient-to-br from-[#401F86] via-slate-900 to-[#633eac] font-inter overflow-x-hidden">
       <div className="container mx-auto px-4 py-8">
         <div className="">
           <div className="flex flex-col md:flex-row gap-1">
             {/* Header */}
-            <div className="text-center mb-12 text-white w-100 md:w-1/2 md:text-left">
-              <h1 className="text-4xl leading-normal md:text-[90px] md:text-left font-bold mb-4 md:mt-10 font-boldonse">AI Powered CRO Audit</h1>
+            <div className="text-center mb-12 text-white w-85 md:w-1/2 md:text-left ">
+              <h1 className="text-3xl leading-normal md:text-[90px] md:text-left font-bold mb-4 md:mt-10 font-boldonse">AI Powered CRO Audit</h1>
               <p className="text-lg text-gray-300">
                 Uncover exactly how much revenue you're leaving on the table
               </p>
